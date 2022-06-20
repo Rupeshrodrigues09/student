@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Students</title>
 </head>
 <body>
@@ -16,7 +17,10 @@
         <th id="rank">Rank</th>
     </tr>
 
-    </table>
+   
+    <tbody id="myTable">
+    </tbody>
+         </table>
  <script>
      
 const students = [
@@ -32,7 +36,17 @@ const students = [
   {name:'Khali',     id:014, class:8, rank:1},
 ];
 
-console.log(name);
+     buildTable(students)
+Function buildTable(data){
+    var table = document.getElementById('myTable')
+    for(var i=0; i<data.length; i++){
+        var row= `<tr>
+        <td>${data[i].name</td>
+        <td>${data[i].id</td>
+        <td>${data[i].class</td>
+        <td>${data[i].rank</td>
+              </tr>`
+              table.innerHTMl+=row
 
  </Script>
 </body>
