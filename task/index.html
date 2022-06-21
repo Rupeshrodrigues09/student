@@ -4,55 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <title>Students</title>
 </head>
 <body>
 
     <table>
         <tr>
-        <th >Name</th>
-        <th >ID</th>
-        <th >Class</th>
-        <th >Rank</th>
+        <th id="name">Name</th>
+        <th id="id">ID</th>
+        <th id="class">Class</th>
+        <th id="rank">Rank</th>
     </tr>
 
-   
-    <tbody id="myTable">
-    </tbody>
-         </table>
+    </table>
  <script>
      
 const students = [
-  { 'name': 'Arun',    'id':'001', 'class':'2',  'rank':'2'},
-  {'name':'cindrella', 'id':'003', 'class':'5', 'rank':'8'},
-  {'name':'Daksh',     'id':'005', 'class':'4', 'rank':'1'},
-  {'name':'Elon',      'id':'006', 'class':'10','rank':'2'},
-  {'name':'Finn',      'id':'007', 'class':'9', 'rank':'8'},
-  {'name':'Garett',    'id':'010', 'class':'4','rank':'11'},
-  {'name':'Hari',      'id':'011', 'class':'7', 'rank':'7'},
-  {'name':'Ismael',    'id':'012', 'class':'4', 'rank':'1'},
-  {'name':'Jaspreet',  'id':'013', 'class':'8', 'rank':'1'},
-  {'name':'Khali',     'id':'014', 'class':'8', 'rank':'1'},
+  { name: 'Arun',    id:001, class:2,  rank:2},
+  {name:'cindrella', id:003, class:5, rank:8},
+  {name:'Daksh',     id:005, class:4, rank:1},
+  {name:'Elon',      id:006, class:10,rank:2},
+  {name:'Finn',      id:007, class:9, rank:8},
+  {name:'Garett',    id:010, class:4, rank:11},
+  {name:'Hari',      id:011, class:7, rank:7},
+  {name:'Ismael',    id:012, class:4, rank:1},
+  {name:'Jaspreet',  id:013, class:8, rank:1},
+  {name:'Khali',     id:014, class:8, rank:1},
 ];
 
-     buildTable(students)
-function buildTable(data) {
-    var table = document.getElementById('myTable')
-    for(var i=0; i<data.length; i++){
-        var row= `<tr>
-        <td>${data[i].name} </td>
-        <td> ${data[i].id}</td>
-        <td> ${data[i].class}</td>
-        <td> ${data[i].rank}</td>
-               </tr>`
-              table.innerHTMl+=row
-            }
-        }
-      
-// document.getElementById("myTable").innerHTML;
+// for (var i = 0; i < students.length; i++) {
+//   var object = students[i];
+//   for (var property in object) {
+//     let myElement = document.getElementById("name,id,class,rank");
+//     document.writeln(students[i].name+students[i].id+students[i].class+students[i].rank);
+// }
+//   }
 
+// $(jQuery.parseJSON(JSON.stringify(students))).each(function() {  
+//     var NAME = this.name;
+//     var ID = this.id;
+// });
+  // If property names are known beforehand, you can also just do e.g.
+  // alert(object.id + ',' + object.Title);
+
+  for(const i = 0; i < students.length; i++) {
+    document.write(students[i] + "<br>");
+}
  </Script>
 </body>
 </html>

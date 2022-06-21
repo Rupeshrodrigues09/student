@@ -1,0 +1,30 @@
+.table-body{
+    text-align: center;
+    background-color: aqua;
+  
+}
+#our-table{
+    text-align: center;
+    border: 2px solid black;
+}
+#table-head{
+    text-align: center;
+
+}
+
+.bgColor {
+    background-color: #137dbd;
+    color: #ffffff;
+  }
+  
+ 
+  
+  #pagination-wrapper{
+      text-align: center;
+      color: rgb(53, 48, 47);
+  }
+
+  .head{
+      text-align: center;
+      border-bottom: 2px solid black;
+  }
